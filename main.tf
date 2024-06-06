@@ -41,6 +41,7 @@ provider "kubernetes" {
   host                   = "https://${data.tfe_outputs.cluster.values.host}"
   token                  = data.google_client_config.default.access_token
   cluster_ca_certificate = data.tfe_outputs.cluster.values.cluster_ca_certificate
+  load_config_file = false
 
 }
 
